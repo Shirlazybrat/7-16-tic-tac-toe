@@ -2,7 +2,38 @@
 body{
 	color:#1C1018;
 }
-.title-wrapper{
+
+h1{
+	font-size: 2em;
+}
+
+#play1, #play2{
+	background-color: #95E06C;
+	font-size: .5em;
+	border-radius: 20%;
+}
+
+#name1, #name2 {
+	margin: 50px;
+	padding: 10px;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 2em;
+	border-bottom: 3px solid #1C1018;
+}
+
+#name1 {
+	float:left;
+}
+
+#name2{
+	float:right;
+}
+
+.hidden{
+	display: none;
+}
+
+.title-wrapper {
 	padding: 30px;
 	text-align:center;
 	margin: 0 auto;
@@ -30,12 +61,16 @@ body{
 
 .box{
 	width: 30%;
-	background-color: #C3F73A;
+	background-color: #094D92;
 	border: none;
 	margin-left: 5%;
 	padding: 30px 0px;
 	float: left;
 	font-size: 80px;
+}
+
+.box.winner {
+	background-color: #C3F73A;
 }
 
 .board-row button:first-child{
