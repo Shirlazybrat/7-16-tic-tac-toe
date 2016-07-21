@@ -1,0 +1,46 @@
+/* color scheme: https://coolors.co/c3f73a-95e06c-68b684-094d92-1c1018 */
+body{
+	color:#1C1018;
+}
+.title-wrapper{
+	padding: 30px;
+	text-align:center;
+	margin: 0 auto;
+	max-width: 640px;
+	min-width: 320px;
+	font-size:48px;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.game-wrapper{
+	background-color: #1C1018;
+	max-width: 640px;
+	min-width: 320px;
+	width: 75%;
+	margin: auto;
+}
+
+.board-row{
+	display: block;
+	padding: 0px;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 5%;
+}
+
+.box{
+	width: 30%;
+	background-color: #C3F73A;
+	border: none;
+	margin-left: 5%;
+	padding: 30px 0px;
+	float: left;
+	font-size: 80px;
+}
+
+.board-row button:first-child{
+	margin: 0px;
+}
+
+
+
