@@ -1,15 +1,9 @@
+// N Sized version
 var whosTurn = 1; //Start off on pleyer ons turn
 
-var winners = [
-	["A1", "A2", "A3"], //row1
-	["B1","B2","B3"], //row2
-	["C1","C2","C3"], //row3
-	["A1", "B2", "C3"], //diag1
-	["A1","B1","C1"], //col1
-	["A2","B2", "C2"], //col2
-	["A3","B3","C3"], //col3
-	["A3","B2","C1"], //other diag
-];
+var winners = [];
+// 3.Build a winners array
+// 2.We need to populate the board
 
 var player1 =[];  //Array where we will stash the squares player has checked
 var player2 = [];  // array for player 2
@@ -96,7 +90,7 @@ function gameOver(whoWon, winningCombo){
 }
 
 function resetGame(){
-   document.getElementById("game-wrapper").addEventListener.reset("onClick", 
+   document.getElementById("game-wrapper").addEventListener.reset("click", 
    	function(){
 		alert("Would you like to play again?");});
  } 
