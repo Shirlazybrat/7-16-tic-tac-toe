@@ -5,6 +5,27 @@ var winners = [];
 var gridSize = 5;
 var alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
 
+
+
+// 2.We need to populate the board
+var htmlForBoard = '';
+var boxWidth = (100/gridSize) - (gridSize - 1);
+for (var i = 0; i<gridSize; i++){
+	htmlForBoard += '<div class"board-row-' + i + ' board-row">';
+		for(j = 0; j<gridSize; j++){
+			htmlForBoard += '<button id="' + alph[i] + j + '" class="box" style="width:'+boxWidth+'%" onclick="markSquare(this)">-</button>';
+		}
+	htmlForBoard += '</div>';
+}
+console.log(htmlForBoard);
+document.getElementsByClassName('game-wrapper')[0].innerHTML = htmlForBoard;
+
+			// <div class="board-row-3 board-row">
+			// 	<button id="C1" class="box"  onClick="markSquare(this)">-</button>
+			// 	<button id="C2" class="box"  onClick="markSquare(this)">-</button>
+			// 	<button id="C3" class="box"  onClick="markSquare(this)">-</button>
+			// </div>
+
 // a0, a1, a2, a3, a4,...aN
 // b0, b1, b2, b3...bN
 
@@ -14,7 +35,6 @@ var diag2 = [];
 winners.push(diag2);
 
 // 3.Build a winners array
-
 for ( var i = 0; i<gridSize; i++){
 	diag1.push(alph[i] + (gridSize-i)); //diag1
 	diag2.push(alph[i] + i); //diag2
@@ -36,7 +56,6 @@ winners.push(diag2);
 
 
 
-// 2.We need to populate the board
 
 var player1 =[];  //Array where we will stash the squares player has checked
 var player2 = [];  // array for player 2
@@ -102,7 +121,7 @@ function checkWin(currentPlayersSquares, whoJustMarked){
 				//Hit!!
 				rowCount++;
 			}
-			if(rowCount == 3){
+			if(rowCount == gridSize){
 				///BINGO!!
 				gameOver(whoJustMarked, winners[i]);
 			}
