@@ -29,10 +29,6 @@ document.getElementById('play2').addEventListener("click", function(){
 		name1.innerHTML = "Player 1 - " + person1;
 		name2.innerHTML = "Player 2 - " + person2;
 	});
-
-	if(document.getElementById('play1').addEventListener("click")){
-		document.getElementById(play2).className += ' hidden';
-	}
 }
 
 whoPlays(); //call the function
@@ -98,4 +94,12 @@ function gameOver(whoWon, winningCombo){
 	}
 	someoneWon = true;
 }
+
+function resetGame(){
+   document.getElementById("game-wrapper").addEventListener.reset("onClick", 
+   	function(){
+		alert("Would you like to play again?");});
+ } 
+
+
 
