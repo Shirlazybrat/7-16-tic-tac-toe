@@ -2,7 +2,40 @@
 var whosTurn = 1; //Start off on pleyer ons turn
 
 var winners = [];
+var gridSize = 5;
+var alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+
+// a0, a1, a2, a3, a4,...aN
+// b0, b1, b2, b3...bN
+
+var diag1 = [];
+winners.push(diag1);
+var diag2 = [];
+winners.push(diag2);
+
 // 3.Build a winners array
+
+for ( var i = 0; i<gridSize; i++){
+	diag1.push(alph[i] + (gridSize-i)); //diag1
+	diag2.push(alph[i] + i); //diag2
+	var winnersInsideH = [];
+	var winnersInsideV = [];
+	for(var j = 0; j<gridSize; j++){
+		//Vertical winners
+	 winnersInsideV.push(alph[j] + i);
+	 //Horizantal winners
+	 winnersInsideH.push(alph[i] + j);
+	}
+	winners.push(winnersInsideH);
+	winners.push(winnersInsideV);
+}
+
+winners.push(diag1);
+winners.push(diag2);
+//possible to have 2 seperate loops but redundant
+
+
+
 // 2.We need to populate the board
 
 var player1 =[];  //Array where we will stash the squares player has checked
